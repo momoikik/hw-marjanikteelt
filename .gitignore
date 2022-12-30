@@ -1,2 +1,3 @@
 venv
 .idea
+git remote add origin git@github.com:momoikik/HW_alex.git
