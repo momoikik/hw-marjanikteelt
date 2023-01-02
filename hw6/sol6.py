@@ -1,2 +1,2 @@
 print("mak")
-print("test from mohammad")
+print("test from mohammadq")
