@@ -1,1 +1,1 @@
-print("marjan")
+print('marjan')
