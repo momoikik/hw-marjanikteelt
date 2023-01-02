@@ -1,1 +1,1 @@
-print("life is so good")
+print("life is so so good")
