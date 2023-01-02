@@ -1,0 +1,2 @@
+print("mak")
+print("madghjj")
