@@ -24,10 +24,10 @@ def fun6(ma): #receive a text string and will replace alphabetical characters in
     for s in ma:   #to count howmany times the letter appeard in the text
         if  s.isalpha():
             num=0
-            for m in ma: #it checks each letter
+            for m in ma: #it checks each letter (check all the charectors)
                 if s==m :
                     num+=1
-            dic[s]=num #save the charaty in the key and how many times apperd in valuo
+            dic[s]=num #save the  character in the key and how many times apperd in valuo
 
     de={}
     de[fun(dic)]="e"
@@ -85,7 +85,7 @@ print(fun2("'Puackich, hvhnkrally oaths phufhck. All ymr nhhd is Pykemn.'J.U.U.U
 
 
 
-def funfile(ma):
+def funfile(ma):  #to save and add the decrypted text to the original text file
     lin=ma
     f = fun2(ma)
     with open("results.txt","w") as file:
@@ -102,41 +102,41 @@ def funfile(ma):
 funfile("'Puackich, hvhnkrally oaths phufhck. All ymr nhhd is Pykemn.'J.U.U.U Kmltin.mmps iks nmk eio; ---> hkmu")
 
 
-def fun0(f):
+def fun0(f):  #  will find the longest word in the file results.txt
     with open("results.txt","r") as file:
         file.seek(0)
         no=file.readline()
         sp=no.split()
     spindx=0
     dic={}
-    for n in sp:
+    for n in sp:  #for that check all the liste that have the words in the test file
         su=0
-        for x in n:
+        for x in n: # for that count the character in the word
             if x.isalpha():
                 su+=1
 
-        dic[sp[spindx]]=su
+        dic[sp[spindx]]=su # save the word in key and value מספר האותיות ב
         spindx += 1
 
     maxum=0
     for m in dic.values():
         if m>maxum:
-            maxum=m
+            maxum=m  # מספר האותיות במילה הארוכה ביותר
     l=[]
     for j in dic.keys():
         if dic.get(j)==maxum:
-            l.append(j)
+            l.append(j) # המילים הארוכות ביותר סאמתי אותם בתוך list
 
     return l
 
 def fun8(f):
-    with open("results.txt","r")as file:
+    with open("results.txt","r")as file: #will count the number of lines in the results.txt
         file.seek(0)
         lefile=file.readlines()
         lefile=len(lefile)
     return lefile
 
-print(funfile("'Puackich, hvhnkrally oaths phufhck. All ymr nhhd is Pykemn.'J.U.U.U Kmltin.mmps iks nmk eio; ---> hkmu"))
+print(funfile("///bha Taa3add, bha Tdaer, enr b7ha Fdcccccbbb..."))
 
-print(fun0("'Practice, eventually makes perfect. All you need is Python.'J.U.U.U Kolkin.oops its not him; ---> etor"))
-print(fun8("'Practice, eventually makes perfect. All you need is Python.'J.U.U.U Kolkin.oops its not him; ---> etor"))
+print(fun0("f"))
+print(fun8("f"))
