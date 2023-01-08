@@ -58,7 +58,9 @@ def fun2(ma):
         lev.append(v)
     stt=""
     for c in ma: #
-        if c==lev[0]:  # if the valuos
+        if c==lev[0]:  # if the charectors in the dectionary is appeard chang it to the appropriate
+                       # letter and save in anather string (stt) ( the  charector in values list chag it to the key list
+
           stt+=lek[0]
         elif c==lev[1]:
             stt+=lek[1]
@@ -75,29 +77,36 @@ def fun2(ma):
         elif c == lev[7]:
             stt += lek[7]
         else:
-            stt+=c
+            stt+=c # if the charector is not in the dictionary add to the sting (stt)
     return stt
 
 print(fun2("'Puackich, hvhnkrally oaths phufhck. All ymr nhhd is Pykemn.'J.U.U.U Kmltin.mmps iks nmk eio; ---> hkmu"))
 
-def funfile(inputFilePath):
-    print (inputFilePath)
-    file = open(inputFilePath, "r+" )
-    line = file.readline()
-    print('z=========')
-    print(line)
-    f=fun2(line)
-    file.write("The encryption for the above text is:\n")
-    file.write(f)
-    with open("results.txt","w+") as resFile:
-        resFile.write(f)
 
 
-funfile("C:\\Users\\user\\Desktop\\test1.txt")
+
+def funfile(ma):
+    lin=ma
+    f = fun2(ma)
+    with open("results.txt","w") as file:
+        file.write(fun2(ma))
+    with open("file_Original.txt", "w+" ) as file :
+
+        file.write(lin)
+        file.write("The encryption for the above text is:")
+        file.write(f)
 
 
-def fun0(no):
-    sp=no.split()
+
+
+funfile("'Puackich, hvhnkrally oaths phufhck. All ymr nhhd is Pykemn.'J.U.U.U Kmltin.mmps iks nmk eio; ---> hkmu")
+
+
+def fun0(f):
+    with open("results.txt","r") as file:
+        file.seek(0)
+        no=file.readline()
+        sp=no.split()
     spindx=0
     dic={}
     for n in sp:
@@ -120,4 +129,14 @@ def fun0(no):
 
     return l
 
-#funfile("'Puackich, hvhnkrally oaths phufhck. All ymr nhhd is Pykemn.'J.U.U.U Kmltin.mmps iks nmk eio; ---> hkmu")
+def fun8(f):
+    with open("results.txt","r")as file:
+        file.seek(0)
+        lefile=file.readlines()
+        lefile=len(lefile)
+    return lefile
+
+print(funfile("'Puackich, hvhnkrally oaths phufhck. All ymr nhhd is Pykemn.'J.U.U.U Kmltin.mmps iks nmk eio; ---> hkmu"))
+
+print(fun0("'Practice, eventually makes perfect. All you need is Python.'J.U.U.U Kolkin.oops its not him; ---> etor"))
+print(fun8("'Practice, eventually makes perfect. All you need is Python.'J.U.U.U Kolkin.oops its not him; ---> etor"))
