@@ -85,7 +85,8 @@ print(fun2("'Puackich, hvhnkrally oaths phufhck. All ymr nhhd is Pykemn.'J.U.U.U
 
 
 
-def funfile(ma):  #to save and add the decrypted text to the original text file
+def funfile(ma):  #to save and add the decrypted text to the original text file and creat a file containing the decrypted
+               #thetext results.
     lin=ma
     f = fun2(ma)
     with open("results.txt","w") as file:
@@ -102,7 +103,7 @@ def funfile(ma):  #to save and add the decrypted text to the original text file
 funfile("'Puackich, hvhnkrally oaths phufhck. All ymr nhhd is Pykemn.'J.U.U.U Kmltin.mmps iks nmk eio; ---> hkmu")
 
 
-def fun0(f):  #  will find the longest word in the file results.txt
+def fun0(f):  #  will find the longest words in the file results.txt
     with open("results.txt","r") as file:
         file.seek(0)
         no=file.readline()
