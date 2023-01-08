@@ -1,6 +1,6 @@
 ma="'Puackich, hvhnkrally oaths phufhck. All ymr nhhd is Pykemn.'J.U.U.U Kmltin.mmps iks nmk eio; ---> hkmu"
 
-
+#part1:
 def fun(dic):  #מחזיר את האותיה שהיתה מופיעה ב   dectinary יותר
     les1 = []
     for n in dic.keys(): #in order to save the key in list
@@ -47,7 +47,7 @@ print(fun6("'Puackich, hvhnkrally oaths phufhck. All ymr nhhd is Pykemn.'J.U.U.U
 
 
 
-
+#part2:
 def fun2(ma):
     den=fun6(ma) #  the fun that save the described connection between the letters into a dictionary
     lek=[]
@@ -84,7 +84,7 @@ print(fun2("'Puackich, hvhnkrally oaths phufhck. All ymr nhhd is Pykemn.'J.U.U.U
 
 
 
-
+#part3:
 def funfile(ma):  #to save and add the decrypted text to the original text file and creat a file containing the decrypted
                #thetext results.
     lin=ma
@@ -99,10 +99,7 @@ def funfile(ma):  #to save and add the decrypted text to the original text file 
 
 
 
-
-funfile("'Puackich, hvhnkrally oaths phufhck. All ymr nhhd is Pykemn.'J.U.U.U Kmltin.mmps iks nmk eio; ---> hkmu")
-
-
+#part4:
 def fun0(f):  #  will find the longest words in the file results.txt
     with open("results.txt","r") as file:
         file.seek(0)
